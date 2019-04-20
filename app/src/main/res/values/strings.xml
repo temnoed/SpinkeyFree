@@ -1,0 +1,59 @@
+<resources>
+
+    <string name="app_name">Spinkey</string>
+    <string name="main_name">Exercises</string>
+
+    <string name="complex_1">Base complex</string>
+    <string name="complex_2">Back strengthening</string>
+    <string name="complex_3">Exercises for round back</string>
+    <string name="complex_4">Legs strengthening</string>
+    <string name="complex_5">Back stretch and relax</string>
+    <string name="recommendations">Exercise advices</string>
+    <string name="progress">Progress watching</string>
+
+    <string name="info_about">Hi there! My name is Spinkey. I\'m a little monkey, I like to play and climb trees. But I have to sit much for lessons, and so my back hurts. Help me - let\'s do the exercises together! \nIf I do not practice just one day, my back starts to hurt. Help me to become slim again - turn on the exercises and do it with me.</string>
+    <string name="info_complex_1">The base complex of exercises is designed for children of any age and can serve as a warm-up before other exercises for strengthening the back or correcting the posture.</string>
+    <string name="info_complex_2">Back strengthening is recommended for all children who sit for a long time at a desk, often slouch, have pronounced sticking blades. This complex consists of five exercises, for which no special tools are required. It is better, if a child performs exercises under adult supervision, even better after working with a physiotherapist.</string>
+    <string name="info_complex_3">Stoop posture in children can lead to incorrect formation of the spine. Parents or doctor may observe it in common. Exercises are of the highly effective means. This complex consists of five exercises, for which no special tools are required. It is better, if a child performs exercises under adult supervision, even better after working with a physiotherapist.</string>
+    <string name="info_complex_4">Legs strengthening is necessary for inactive children who rarely perform outdoor activities and walk. Also this\'d be useful for a flattened foot arch, valgus and varus deformities, posture disorders, after long in-bed periods. Children are supposed to perform exercises under adult guidance after careful technique studying.</string>
+    <string name="info_complex_5">Back muscles stretch and relax are necessary after a long work, high loads, as well as school activities. Stretching and relaxation allow you to balance your posture and prevent unevenness of back muscles. A child is supposed to perform exercises under adult supervision, better after working with a physiotherapist and then perform regularly at home.</string>
+    <string name="info_recommendations">It is desirable to hold exercises in the air or in a well-ventilated room on a thin yoga mat. The surface should not be soft, otherwise the exercises will not be effective. Prior to start carefully study all instructions for the exercises. Clothes for training should be free and not impede movement. The adult should control how the child performs the exercises, especially at the beginning. If the exercise causes pain or discomfort, do not do it and consult a doctor or instructor. Before the beginning of the classes and then once a month it is advisable to undergo an examination of a physician, physiotherapist, neurologist or osteopath.</string>
+    <string name="info_progress">Soon on this page you can take a picture of the child\'s back and track progress.</string>
+
+
+    <string name="need_pro">To see complex, get full version</string>
+    <string name="download">Get full version on Google Play</string>
+    <string name="start_complex">Let’s start</string>
+    <string name="choose_complex">Choose complex</string>
+    <string name="next_exercise">Next exercise</string>
+    <string name="finish_exercise">End of section</string>
+    <string name="praise">Great job! \nYou\'ve done all exercises.</string>
+
+
+    <string name="complex_1_exercise_1_name">Starting position</string>
+    <string name="complex_1_exercise_2_name">Walk watching posture</string>
+    <string name="complex_1_exercise_3_name">Toe walking</string>
+    <string name="complex_1_exercise_4_name">Heels walking</string>
+    <string name="complex_1_exercise_5_name">Arch with hands up</string>
+    <string name="complex_1_exercise_6_name">Shoulder blades join</string>
+    <string name="complex_1_exercise_7_name">Shoulders rotation</string>
+    <string name="complex_1_exercise_8_name">Leans with straight back</string>
+    <string name="complex_1_exercise_9_name">The mill</string>
+    <string name="complex_1_exercise_10_name">Backward arms rotation</string>
+    <string name="complex_1_exercise_11_name">Arms lifts</string>
+    <string name="complex_1_exercise_12_name">Aside leans</string>
+
+    <string name="complex_1_exercise_1_info">Stand up straight firmly on the floor. Draw heels together, toes apart. Straighten your back and align your shoulders. Try to squeeze your shoulder blades together. Tighten your stomach and raise your chin up.</string>
+    <string name="complex_1_exercise_2_info">Keep starting posture and walk around. Straighten your back, try reach your head up to the sky. Move arms in time with walking. Walk for 15 – 20 seconds having 30 – 40 steps done.</string>
+    <string name="complex_1_exercise_3_info">Walk on toes with hands behind your head. Reach the head up, keep watching the posture. Go on for 15 – 20 sec.</string>
+    <string name="complex_1_exercise_4_info">Walk on heels with hands at your waist. Reach the head up, keep watching the posture. Go on for 15 – 20 sec.</string>
+    <string name="complex_1_exercise_5_info">Raise your hands up and put a foot back at once, bend your back, inhale. Get to starting position, exhale. Do the same with other foot. Repeat for 7 – 10 times.</string>
+    <string name="complex_1_exercise_6_info">Feet shoulder–width apart, hands on the waist. Count 1–2: spread your elbows and squeeze shoulder blades, inhale. Count 3–4: return to the starting position, exhale. Repeat 15 – 20 times.</string>
+    <string name="complex_1_exercise_7_info">Stand feet shoulder-width apart, hands with pinched fingers on the shoulders. Rotate elbows simultaneously trying to do bigger circles. Repeat 20 times forward and 20 times backward.</string>
+    <string name="complex_1_exercise_8_info">Stand feet shoulder–width apart, hands with pinched fingers on the shoulders. Count 1: Lean forward with straight back to a horizontal level. Look strictly forward. Count 2: erect to starting position. Repeat 15 – 20 times with moderate tempo.</string>
+    <string name="complex_1_exercise_9_info">Stand feet shoulder–width apart, back straight. Count 1: Join your hands behind the back, the right one up. Count 2: Likewise, but left one up. Repeat 15 – 20 times.</string>
+    <string name="complex_1_exercise_10_info">Stand feet shoulder–width apart, arms wide spread to sides. Rotate arms backward so that hands make big circles in air. Repeat 25 – 30 times with fast pace.</string>
+    <string name="complex_1_exercise_11_info">Stand feet shoulder–width apart. Arms straight down along the body. Count 1: raise hands up through the sides possibly higher, inhale. Count 2: drop arms down, exhale. Repeat 15 – 20 times.</string>
+    <string name="complex_1_exercise_12_info">Stand feet shoulder–width apart. Join your hands behind the back. Lean your body strictly to the side on 45 deg. Look only forward. Repeat 10 – 15 times in each side with moderate pace.</string>
+
+</resources>
