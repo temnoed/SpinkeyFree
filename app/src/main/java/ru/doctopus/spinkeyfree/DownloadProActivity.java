@@ -32,7 +32,7 @@ public class DownloadProActivity extends AppCompatActivity {
 
     // перейти по ссылке в магазин
     public void linkDownload(View view) {
-        String appPackageName = "ru.bruimafia.spinkey"; // здесь должно быть имя пакета платной версии приложения
+        String appPackageName = "com.p9b8805d001412d141092d7bd9d076dcd.spinkeypayed"; // здесь должно быть имя пакета платной версии приложения
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException anfe) {

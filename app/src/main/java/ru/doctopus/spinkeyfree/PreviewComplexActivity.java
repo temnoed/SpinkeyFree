@@ -82,7 +82,7 @@ public class PreviewComplexActivity extends AppCompatActivity {
         }
         if (action.equals(getString(R.string.progress))) {
             info.setText(getString(R.string.info_progress));
-            btn.setVisibility(View.GONE);
+            btn.setText(getString(R.string.choose_complex));
         }
     }
 
@@ -111,6 +111,8 @@ public class PreviewComplexActivity extends AppCompatActivity {
             download();
         else if (action.equals(getString(R.string.recommendations)))
             startActivity(new Intent(this, MainActivity.class));
+        else if (action.equals(getString(R.string.progress)))
+            startActivity(new Intent(this, MainActivity.class));
         else if (action.equals(getString(R.string.complex_1)))
             startActivity(new Intent(this, ComplexActivity.class));
 
@@ -133,7 +135,7 @@ public class PreviewComplexActivity extends AppCompatActivity {
 
 
     public void download() {
-        String appPackageName = "ru.bruimafia.spinkey"; // здесь должно быть имя пакета платной версии приложения
+        String appPackageName = "com.p9b8805d001412d141092d7bd9d076dcd.spinkeypayed"; // здесь должно быть имя пакета платной версии приложения
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException anfe) {

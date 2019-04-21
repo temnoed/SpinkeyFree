@@ -11,13 +11,15 @@ android {
     }
     compileSdkVersion 28
     defaultConfig {
-        applicationId 'ru.doctopus.spinkeyfree'
+        applicationId 'com.p9b8805d001412d141092d7bd9d076dcd.spinkey'
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 12
-        versionName 'innertest'
+        versionName 'April'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
+        testApplicationId 'Spinkey Free'
+        versionNameSuffix 'release'
     }
     buildTypes {
         release {
