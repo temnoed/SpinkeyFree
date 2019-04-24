@@ -96,7 +96,7 @@ public class ComplexActivity extends AppCompatActivity {
         video.requestFocus();
 
 
-        // зацикливаем видео
+        //  зацикливаем видео
         video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer videoView ) {
