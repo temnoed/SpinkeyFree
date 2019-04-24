@@ -5,12 +5,15 @@ import androidx.appcompat.widget.Toolbar;
 import ru.doctopus.spinkeyfree.R;
 
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import java.util.ArrayList;
 
@@ -19,12 +22,15 @@ public class ComplexActivity extends AppCompatActivity {
     private ImageView demonstrative;
     private TextView info;
     private Toolbar toolbar;
-
+    private VideoView video;
+    private int position = 0;
+    private MediaController mediaController;
     private MediaPlayer mPlayer;
 
     private ArrayList<String> namesExercise = new ArrayList<>(); // названия упражнений комплекса 1
     private ArrayList<String> instructions = new ArrayList<>(); // информация упражнений комплекса 1
     private ArrayList<Integer> imagesBoy = new ArrayList<>(); // картинки с инструкциями (мальчик)
+    private ArrayList<String> videoURLs = new ArrayList<>(); // адреса видео файлов
 //    private ArrayList<Integer> imagesGirl = new ArrayList<>(); // картинки с инструкциями (девочка)
     private int currentExercise = 0;
 
@@ -38,6 +44,8 @@ public class ComplexActivity extends AppCompatActivity {
         demonstrative = findViewById(R.id.demonstrative);
         info = findViewById(R.id.info);
         toolbar = findViewById(R.id.toolbar);
+        video =  findViewById(R.id.videoFrame);
+
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             if (getSupportActionBar() != null) {
@@ -60,6 +68,48 @@ public class ComplexActivity extends AppCompatActivity {
         mPlayer.setLooping(true);
         mPlayer.start();
 
+        // видео опыты
+              // Set the media controller buttons
+      /*  if (mediaController == null) {
+            mediaController = new MediaController(ComplexActivity.this);
+
+            // Set the videoView that acts as the anchor for the MediaController.
+            mediaController.setAnchorView(videoView);
+
+            // Set MediaController for VideoView
+            videoView.setMediaController(mediaController);
+        }*/
+
+        try {
+            // ID of video file.
+            //int id = this.getRawResIdByName("start_position");
+            //videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + id));
+
+            // String videoAddres="https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k";
+            Uri videoUrl = Uri.parse(videoURLs.get(currentExercise));
+            video.setVideoURI(videoUrl);
+
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+        video.requestFocus();
+
+
+        // зацикливаем видео
+        video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer videoView ) {
+                videoView.setLooping(true);
+            }
+        });
+
+        // When the video file ready for playback.
+        video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                    video.start();
+            }
+        });
 
     }
 
@@ -69,12 +119,16 @@ public class ComplexActivity extends AppCompatActivity {
         currentExercise++;
         Log.i("test", currentExercise+"");
         if (currentExercise == namesExercise.size()) {
+            video.stopPlayback();
             toolbar.setTitle(R.string.finish_exercise);
+            findViewById(R.id.videoFrame).setVisibility(View.GONE);
+            findViewById(R.id.demonstrative).setVisibility(View.VISIBLE);
             demonstrative.setImageResource(R.drawable.logo);
             info.setText(getString(R.string.praise));
             findViewById(R.id.btn).setVisibility(View.GONE);
             if (mPlayer.isPlaying())
                 mPlayer.pause();
+
         } else
             updateUI();
     }
@@ -85,8 +139,39 @@ public class ComplexActivity extends AppCompatActivity {
         toolbar.setTitle(namesExercise.get(currentExercise));
         demonstrative.setImageResource(imagesBoy.get(currentExercise));
         info.setText(instructions.get(currentExercise));
-    }
 
+        try {
+            // ID of video file.
+            //int id = this.getRawResIdByName("start_position");
+            //videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + id));
+
+            // String videoAddres="https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k";
+            Uri videoUrl = Uri.parse(videoURLs.get(currentExercise));
+            video.setVideoURI(videoUrl);
+
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+        video.requestFocus();
+
+
+        // зацикливаем видео
+        video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer videoView ) {
+                videoView.setLooping(true);
+            }
+        });
+
+        // When the video file ready for playback.
+        video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                video.start();
+            }
+        });
+
+    }
 
     // загружаем данные
     private void setData() {
@@ -129,6 +214,20 @@ public class ComplexActivity extends AppCompatActivity {
         imagesBoy.add(R.drawable.gimnastika_boy_11);
         imagesBoy.add(R.drawable.gimnastika_boy_12);
 
+
+        videoURLs.add(getString(R.string.video_starting_position));
+        videoURLs.add(getString(R.string.video_walk_watching_posture));
+        videoURLs.add(getString(R.string.video_Toe_walking));
+        videoURLs.add(getString(R.string.video_Heels_walking));
+        videoURLs.add(getString(R.string.video_Arch_with_hands_up));
+        videoURLs.add(getString(R.string.video_Shoulder_blades_join));
+        videoURLs.add(getString(R.string.video_Shoulders_rotation));
+        videoURLs.add(getString(R.string.video_Leans_with_straight_back));
+        videoURLs.add(getString(R.string.video_The_mill));
+        videoURLs.add(getString(R.string.video_Backward_arms_rotation));
+        videoURLs.add(getString(R.string.video_Arms_lifts));
+        videoURLs.add(getString(R.string.video_Aside_leans));
+
      /*   imagesGirl.add(R.drawable.gimnastika_girl_01);
         imagesGirl.add(R.drawable.gimnastika_girl_02);
         imagesGirl.add(R.drawable.gimnastika_girl_03);
@@ -169,6 +268,7 @@ public class ComplexActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         releaseMP();
+        releaseVideoPlayer();
     }
 
 
@@ -183,5 +283,21 @@ public class ComplexActivity extends AppCompatActivity {
             }
         }
     }
+
+    // освобождаем ресурсы проигрывателя
+    private void releaseVideoPlayer() {
+        if (video != null) {
+            try {
+                video = null;
+                // освободить ресурсы видео плеера
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
+
 
 }

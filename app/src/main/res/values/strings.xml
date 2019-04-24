@@ -56,4 +56,17 @@
     <string name="complex_1_exercise_11_info">Stand feet shoulder–width apart. Arms straight down along the body. Count 1: raise hands up through the sides possibly higher, inhale. Count 2: drop arms down, exhale. Repeat 15 – 20 times.</string>
     <string name="complex_1_exercise_12_info">Stand feet shoulder–width apart. Join your hands behind the back. Lean your body strictly to the side on 45 deg. Look only forward. Repeat 10 – 15 times in each side with moderate pace.</string>
 
+    <string name="video_starting_position" translatable="false">https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k</string>
+    <string name="video_walk_watching_posture" translatable="false">_</string>
+    <string name="video_Toe_walking" translatable="false">https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k</string>
+    <string name="video_Heels_walking" translatable="false">_</string>
+    <string name="video_Arch_with_hands_up" translatable="false">https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k</string>
+    <string name="video_Shoulder_blades_join" translatable="false">_</string>
+    <string name="video_Shoulders_rotation" translatable="false">https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k</string>
+    <string name="video_Leans_with_straight_back" translatable="false">_</string>
+    <string name="video_The_mill" translatable="false">https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k</string>
+    <string name="video_Backward_arms_rotation" translatable="false">_</string>
+    <string name="video_Arms_lifts" translatable="false">https://drive.google.com/uc?id=1giOnpkAO63cxFRMGi-fi30smAC3mQX4k</string>
+    <string name="video_Aside_leans" translatable="false">_</string>
+
 </resources>

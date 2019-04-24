@@ -26,17 +26,15 @@
                 android:orientation="vertical">
 
                 <VideoView
-                    android:id="@+id/videoFrame"
-                    android:layout_width="wrap_content"
-                    android:layout_height="400dp"
-                    android:layout_gravity="center" />
+                    android:id="@+id/videoView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/demonstrative"
                     android:layout_width="match_parent"
                     android:layout_height="350dp"
-                    android:src="@drawable/gimnastika_boy_01"
-                    android:visibility="gone" />
+                    android:src="@drawable/gimnastika_boy_01" />
 
                 <TextView
                     android:id="@+id/info"
