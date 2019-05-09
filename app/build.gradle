@@ -14,12 +14,12 @@ android {
         applicationId 'com.p9b8805d001412d141092d7bd9d076dcd.spinkey'
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 13
-        versionName 'April'
+        versionCode 14
+        versionName 'May'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
         testApplicationId 'Spinkey Free'
-        versionNameSuffix '.debug'
+        versionNameSuffix '.beta'
     }
     buildTypes {
         release {

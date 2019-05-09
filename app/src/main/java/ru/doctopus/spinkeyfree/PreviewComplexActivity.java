@@ -106,18 +106,17 @@ public class PreviewComplexActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
+    // выбрать действие по одной из кнопок на главном экране
     public void startComplex(View view) {
-        if (action.equals(getString(R.string.app_name)))
-            download();
+        if (action.equals(getString(R.string.complex_1)))
+            startActivity(new Intent(this, ComplexActivity.class));
+        else if (action.equals(getString(R.string.app_name)))
+            downloadPayed();
         else if (action.equals(getString(R.string.recommendations)))
             startActivity(new Intent(this, MainActivity.class));
         else if (action.equals(getString(R.string.progress)))
             startActivity(new Intent(this, MainActivity.class));
-        else if (action.equals(getString(R.string.complex_1)))
-            startActivity(new Intent(this, ComplexActivity.class));
-
         /** нижнеследующий блок else if закрыт в бесплатной версии, чтобы ограничить доступ к полному набору комплексов упражнений
-
         else if (action.equals(getString(R.string.complex_2)))
             startActivity(new Intent(this, ComplexActivity.class));
         else if (action.equals(getString(R.string.complex_3)))
@@ -126,15 +125,13 @@ public class PreviewComplexActivity extends AppCompatActivity {
             startActivity(new Intent(this, ComplexActivity.class));
         else if (action.equals(getString(R.string.complex_5)))
             startActivity(new Intent(this, ComplexActivity.class));
-
          */
-
         else
-            startActivity(new Intent(this, DownloadProActivity.class));
+            downloadPayed();
     }
 
-
-    public void download() {
+    // предложить установить платную версию
+    public void downloadPayed() {
         String appPackageName = "com.p9b8805d001412d141092d7bd9d076dcd.spinkeypayed"; // здесь должно быть имя пакета платной версии приложения
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
@@ -142,5 +139,6 @@ public class PreviewComplexActivity extends AppCompatActivity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
     }
+
 
 }
