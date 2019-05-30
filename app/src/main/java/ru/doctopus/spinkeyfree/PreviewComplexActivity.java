@@ -1,5 +1,6 @@
 package ru.doctopus.spinkeyfree;
 
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import ru.doctopus.spinkeyfree.R;
@@ -18,6 +19,7 @@ public class PreviewComplexActivity extends AppCompatActivity {
     private ImageView logo;
     private TextView info;
     private Button btn;
+    private Button watsup;
 
     private String action = null;
 
@@ -31,6 +33,7 @@ public class PreviewComplexActivity extends AppCompatActivity {
         action = getIntent().getExtras().getString("action", null);
 
         logo = findViewById(R.id.logo);
+        watsup = findViewById(R.id.watsup);
         info = findViewById(R.id.info);
         btn = findViewById(R.id.btn);
 
@@ -53,6 +56,7 @@ public class PreviewComplexActivity extends AppCompatActivity {
     private void chooseActivity(String action) {
         if (action.equals(getString(R.string.app_name))) {
             logo.setVisibility(View.VISIBLE);
+            watsup.setVisibility(View.VISIBLE);
             info.setText(getString(R.string.info_about));
             btn.setText(getString(R.string.download));
         }
@@ -130,15 +134,23 @@ public class PreviewComplexActivity extends AppCompatActivity {
             downloadPayed();
     }
 
-    // предложить установить платную версию
+    // при нажатии на кнопку, предложить установить платную версию
     public void downloadPayed() {
-        String appPackageName = "com.p9b8805d001412d141092d7bd9d076dcd.spinkeypayed"; // здесь должно быть имя пакета платной версии приложения
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + R.string.paidPackageName)));
         } catch (android.content.ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + R.string.paidPackageName)));
         }
     }
 
+    // при нажатии на кнопку, вызвать контакт watsApp
+    public void onWatsAppBtn(View view)
+    {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/"+ R.string.WatsAppNum)));
+        } catch (android.content.ActivityNotFoundException anfe) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/"+ R.string.WatsAppNum)));
+        }
+    }
 
 }

@@ -11,6 +11,14 @@
     <string name="recommendations">Exercise advices</string>
     <string name="progress">Progress watching</string>
 
+    <!--контакты WatsApp : -->
+    <string name="WatsUpBtn" translatable="false">WhatsApp Me!</string>
+    <string name="WatsAppNum" translatable="false">79201772900</string>
+
+    <!--имя паета платной версии : -->
+    <string name="paidPackageName" translatable="false">com.p9b8805d001412d141092d7bd9d076dcd.spinkeypayed</string>
+
+
     <string name="info_about">Hi there! My name is Spinkey. I\'m a little monkey, I like to play and climb trees. But I have to sit much for lessons, and so my back hurts. Help me - let\'s do the exercises together! \nIf I do not practice just one day, my back starts to hurt. Help me to become slim again - turn on the exercises and do it with me.</string>
     <string name="info_complex_1">The base complex of exercises is designed for children of any age and can serve as a warm-up before other exercises for strengthening the back or correcting the posture.</string>
     <string name="info_complex_2">Back strengthening is recommended for all children who sit for a long time at a desk, often slouch, have pronounced sticking blades. This complex consists of five exercises, for which no special tools are required. It is better, if a child performs exercises under adult supervision, even better after working with a physiotherapist.</string>

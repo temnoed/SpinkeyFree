@@ -30,8 +30,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="gone"
-                    android:src="@drawable/logo"/>
+                    android:src="@drawable/logo"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/watsup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onWatsAppBtn"
+                    android:text="@string/WatsUpBtn"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/info"
