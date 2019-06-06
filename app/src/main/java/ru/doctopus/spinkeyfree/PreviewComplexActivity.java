@@ -1,9 +1,9 @@
 package ru.doctopus.spinkeyfree;
 
-import androidx.annotation.StringRes;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import ru.doctopus.spinkeyfree.R;
+
 
 import android.content.Intent;
 import android.net.Uri;
@@ -137,9 +137,9 @@ public class PreviewComplexActivity extends AppCompatActivity {
     // при нажатии на кнопку, предложить установить платную версию
     public void downloadPayed() {
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + R.string.paidPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getString(R.string.paidPackageName))));
         } catch (android.content.ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + R.string.paidPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getString(R.string.paidPackageName))));
         }
     }
 
@@ -147,9 +147,9 @@ public class PreviewComplexActivity extends AppCompatActivity {
     public void onWatsAppBtn(View view)
     {
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/"+ R.string.WatsAppNum)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/"+ getString(R.string.WatsAppNum))));
         } catch (android.content.ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/"+ R.string.WatsAppNum)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/"+ getString(R.string.WatsAppNum))));
         }
     }
 
