@@ -56,7 +56,8 @@ public class PreviewComplexActivity extends AppCompatActivity {
     private void chooseActivity(String action) {
         if (action.equals(getString(R.string.app_name))) {
             logo.setVisibility(View.VISIBLE);
-            watsup.setVisibility(View.VISIBLE);
+            // кнопка watsup д.б. доступна только в платной версии
+            //watsup.setVisibility(View.VISIBLE);
             info.setText(getString(R.string.info_about));
             btn.setText(getString(R.string.download));
         }
